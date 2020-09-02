@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:900"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <title>User Authentication System</title>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-light navbar-expand-md"
+        style="background-color: #f3f3f3"
+      >
+        <a class="navbar-brand" href="/">UserAuth</a>
+        <div class="ml-auto">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <% if(typeof user !== 'undefined') { %>
+              <li class="nav-item m-1">
+                <a class="btn btn-outline-dark btn-md" id="logoutbtn">Logout</a>
+              </li>
+              <% } else { %>
+              <li class="nav-item m-1">
+                <a class="btn btn-dark btn-md" href="/login">Log In</a>
+              </li>
+              <li class="nav-item m-1">
+                <a class="btn btn-outline-dark btn-md" href="/signup"
+                  >Sign Up</a
+                >
+              </li>
+              <%}%>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
